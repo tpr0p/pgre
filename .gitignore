@@ -1,0 +1,16 @@
+# binaries
+*.DS_Store
+
+# editor
+*~
+*\#
+
+# latex
+*.log
+*.out
+*.aux
+*.bbl
+
+# misc
+scratch
+

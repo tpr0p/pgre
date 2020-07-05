@@ -1,0 +1,184 @@
+\documentclass[avery5388, frame, grid]{flashcards}
+
+\input{preamble}
+
+\begin{document}
+
+\begin{flashcard}{kinematic equations}
+  {\begin{align*}
+    \bar{v} &= \frac{1}{2} (v_{i} + v_{f})\\
+    \Delta v &= a \Delta t + v_{i}\\
+    x(t) &= \frac{1}{2} a t^{2} + v_{i} t + x_{i}\\
+    v_{f}^{2} - v_{i}^{2} &= 2 a \Delta x\\
+  \end{align*}}
+\end{flashcard}
+
+\begin{flashcard}{uniform circular motion}
+  {\begin{align*}
+      a &= \frac{v^{2}}{r}\\
+  \end{align*}}
+\end{flashcard}
+
+\begin{flashcard}{kintec and potential energy}
+  {
+    \begin{align*}
+      E_{\textrm{trans}} &= \frac{1}{2} m v^{2}\\
+      E_{\textrm{rot}} &= \frac{1}{2} I \omega^{2}\\
+      E_{\textrm{gpe}} &= m g h\\
+      E_{\textrm{sho}} &= \frac{1}{2} k x^{2}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{potential energy, force, work}
+  {
+    \begin{align*}
+       dU &= -\vec{F} d\vec{l}\\
+      \vec{F} &= - \vec{\nabla} U\\
+      dW &= \vec{F} \cdot d\vec{l}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{gravitational force}
+  {
+    \begin{align*}
+      \vec{F} &= - G m_{1} m_{2} r^{-2} \hat{r_{12}}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{angular momentum}
+  {
+    \begin{align*}
+      \vec{L} &= \vec{r} \times \vec{p} = I \vec{\omega}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{torque}
+  {
+    \begin{align*}
+      \tau = \vec{r} \times \vec{F} = \frac{d \vec{L}}{dt}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{constant angular velocity}
+  {
+    \begin{align*}
+      \vec{F} = - m \Omega^{2} r \hat{r}_{\textrm{centrifuge}} - 2 m \vec{\Omega} \times \vec{v}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{spherical elements}
+  {
+    \begin{align*}
+      d\vec{l} &= dr \hat{r} + r d\theta \hat{\theta} + r \sin\theta d\phi \hat{\phi}\\
+      d\vec{S} &= r^{2}\sin\theta d\theta d\phi \hat{r} + r \sin\theta dr d\phi \hat{\theta} + r dr d\theta \hat{\phi}\\
+      dV &= r^{2}\sin\theta dr d\theta d\phi\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{moment of inertia}
+  {
+    \begin{align*}
+      I &= \int{s^{2} dm}\\
+      I &= I_{\textrm{CM}} + M s^{2}\\
+      I_{z} &= I_{x} + I_{y} \; \textrm{for $z$ perpendicular to the body lying in the $x-y$ plane}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{Lagrangian}
+  {
+    \begin{align*}
+        L(\dot{q}_{i}, q_{i}, t) &= T - U\\
+        \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_{i}} &= \frac{\partial L}{\partial q_{i}}\\
+        p_{i} &= \frac{\partial L}{\partial \dot{q}_{i}}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{Hamiltonian}
+  {
+    \begin{align*}
+      H(p, q) &= \sum_{i} p_{i} \dot{q}_{i} - L\\
+      H &= T + U \; \textrm{if $U$ is independent of $\dot{q}$ and $t$}\\
+      \dot{p} &= - \frac{\partial H}{\partial q}\\
+      \dot{q} &= \frac{\partial H}{\partial p}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{effective orbital potential}
+  {
+    \begin{align*}
+      E = T + V &= \frac{1}{2} m \dot{r}^{2} + \frac{l^2}{2 m r^{2}} + U(r)\\
+      l &= m r^{2} \dot{\phi}\\
+      \mu &= \frac{m_{1} m_{2}}{m_{1} + m_{2}}\\
+      E &> 0 \implies \textrm{hyperbolic}\\
+      E &= 0 \implies \textrm{parabolic}\\
+      E &< 0 \implies \textrm{elliptical}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{Kepler's laws}
+  {
+    \begin{itemize}
+    \item Planets move in elliptical orbits with one focus at the sun
+    \item Equal orbital area sweeps out equal orbital time
+    \item $T = ka^{\frac{3}{2}}$ for all planets
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{damped oscillation}
+  {
+    \begin{align*}
+      0 &= m\ddot{x} + b\dot{x} + kx \\
+      \beta &= \frac{b}{2m}\\
+      \omega_{0} &= (\frac{k}{m})^{\frac{1}{2}}\\
+    \end{align*}
+  }
+  {
+    \begin{itemize}
+    \item $\beta^{2} > \omega_{0}^{2}$: overdamped decays exponentially
+    \item $\beta^{2} = \omega_{0}^{2}$: critically damed
+    \item $\beta^{2} < \omega_{0}^{2}$: underdamped decays exponentially, modulated by a sinusoid at $\omega_{1}^{2} = \omega_{0}^{2} - \beta^{2}$
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{driven oscillation}
+  {
+    \begin{align*}
+      \omega_{\textrm{R}} &= (\omega_{0}^{2} - 2 \beta^{2})^{\frac{1}{2}}\\
+      D &\propto {\vert \omega_{0}^{2} - \omega^{2} \vert}^{-1} \; \textrm{for undamped, driven oscillator}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{oscillators}
+  {
+    \begin{itemize}
+    \item pendulum $\omega = (\frac{g}{l})^{\frac{1}{2}}$
+    \item physical pendulum $\omega = (\frac{mgR}{I})^{\frac{1}{2}}$
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{fluid dynamics}
+  {
+    \begin{align*}
+      \frac{v^2}{2} &+ g z + \frac{p}{\rho} = \textrm{const}\\
+      p \; \textrm{pressure, } &\rho \; \textrm{fluid density, } z \; \textrm{height of a point along streamline}\\
+      F & = \rho V g\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\end{document}
