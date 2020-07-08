@@ -181,4 +181,72 @@
   }
 \end{flashcard}
 
+\begin{flashcard}{Maxwell's equations}
+  {
+    \begin{align*}
+      \vec{\nabla} \cdot \vec{E} &= \frac{\rho}{\epsilon_{0}}\\
+      \vec{\nabla} \times \vec{E} &= \frac{- \partial \vec{B}}{\partial t}\\
+      \vec{\nabla} \cdot \vec{B} &= 0\\
+      \vec{\nabla} \times \vec{B} &= \mu_{0} \vec{J} + c^{-2} \frac{\partial \vec{E}}{\partial t}\\
+      \frac{\partial \rho}{\partial t} &+ \vec{\nabla} \cdot \vec{J} = 0\\
+      \vec{E} &= - \vec{\nabla} \phi - \frac{\partial \vec{A}}{\partial t}\\
+      \vec{B} &= \vec{\nabla} \times \vec{A}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{electrostatics}
+  {
+    \begin{align*}
+      \vec{E} &= -\vec{\nabla} \phi \implies \phi = - \int_{a}^{b} \vec{E} \cdot d\vec{l}\\
+      \nabla^{2} \phi &= - \frac{\rho}{\epsilon_{0}} \implies
+      \phi = \frac{1}{4 \pi \epsilon_{0}} \int \frac{\rho(\vec{r}^{'})}{\lvert \vec{r} - \vec{r}^{'}\lvert} d^{3}\vec{r}^{'}\\
+      \int_{S} \vec{E}(\vec{r}) \cdot d\vec{S} &= \frac{Q_{\textrm{enc}}}{\epsilon_{0}}\\
+      \int_{C} \vec{E}(\vec{r}) \cdot d\vec{l} &= 0\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{boundary conditions}
+  {
+    \begin{align*}
+      E^{\parallel}_{\textrm{out}} - E^{\parallel}_{\textrm{in}} &= 0\\
+      E^{\bot}_{\textrm{out}} - E^{\bot}_{\textrm{in}} &= \frac{\sigma}{\epsilon_{0}}\\
+      \phi &\textrm{is continuous}\\
+      \partial \phi & \textrm{continuous when no surface charge is present}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{conductors}
+  {
+    \begin{align*}
+      \phi &= \textrm{const. throughout conductor}\\
+      & \implies \textrm{E-field inside is zero}\\
+      & \implies Q_{\textrm{inside}} = 0\\
+      & \implies Q_{\textrm{net}} \textrm{confined to surface}\\
+      & \implies \textrm{E-field outside is perpendicular to surface}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{work and energy in electrostatics}
+  {
+    \begin{align*}
+      W &= \frac{1}{2} \int \rho \phi d^{3}r\\
+      U_{E} &= \frac{\epsilon_{0}}{2} \int {\lvert \vec{E} \lvert}^{2} d^{3}r\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{capacitors}
+  {
+    \begin{align*}
+      Q &= C \phi\\
+      C_{\textrm{parallel plate}} &= \frac{\epsilon_{0} A}{d}\\
+      U &= \frac{1}{2} Q^{2} C^{-1} = \frac{1}{2} C \phi^{2}\\
+    \end{align*}
+  }
+\end{flashcard}
+
 \end{document}
