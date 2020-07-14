@@ -4,6 +4,7 @@
 
 \begin{document}
 
+%% MECHANICS
 \begin{flashcard}{kinematic equations}
   {\begin{align*}
     \bar{v} &= \frac{1}{2} (v_{i} + v_{f})\\
@@ -181,13 +182,14 @@
   }
 \end{flashcard}
 
+%% EM
 \begin{flashcard}{Maxwell's equations}
   {
     \begin{align*}
       \vec{\nabla} \cdot \vec{E} &= \frac{\rho}{\epsilon_{0}}\\
       \vec{\nabla} \times \vec{E} &= \frac{- \partial \vec{B}}{\partial t}\\
       \vec{\nabla} \cdot \vec{B} &= 0\\
-      \vec{\nabla} \times \vec{B} &= \mu_{0} \vec{J} + c^{-2} \frac{\partial \vec{E}}{\partial t}\\
+      \vec{\nabla} \times \vec{B} &= \mu_{0} \vec{J} + \mu_{0} \epsilon_{0} \frac{\partial \vec{E}}{\partial t}\\
       \frac{\partial \rho}{\partial t} &+ \vec{\nabla} \cdot \vec{J} = 0\\
       \vec{E} &= - \vec{\nabla} \phi - \frac{\partial \vec{A}}{\partial t}\\
       \vec{B} &= \vec{\nabla} \times \vec{A}\\
@@ -209,12 +211,19 @@
 
 \begin{flashcard}{boundary conditions}
   {
+    Electrostatics
     \begin{align*}
       E^{\parallel}_{\textrm{out}} - E^{\parallel}_{\textrm{in}} &= 0\\
       E^{\bot}_{\textrm{out}} - E^{\bot}_{\textrm{in}} &= \frac{\sigma}{\epsilon_{0}}\\
       \phi &\textrm{is continuous}\\
       \partial \phi & \textrm{continuous when no surface charge is present}\\
     \end{align*}
+    Magnetostatics
+    \begin{align*}
+      B^{\parallel}_{\textrm{out}} - B^{\parallel}_{\textrm{in}} &= \mu_{0} \vec{k} \times \hat{n}
+      B^{\bot}_{\textrm{out}} - B^{\bot}_{\textrm{in}} &= 0
+    \end{align*}
+    $\vec{k}$ is the surface current density
   }
 \end{flashcard}
 
@@ -230,11 +239,12 @@
   }
 \end{flashcard}
 
-\begin{flashcard}{work and energy in electrostatics}
+\begin{flashcard}{work and energy in (electro/magneto)statics}
   {
     \begin{align*}
       W &= \frac{1}{2} \int \rho \phi d^{3}r\\
       U_{E} &= \frac{\epsilon_{0}}{2} \int {\lvert \vec{E} \lvert}^{2} d^{3}r\\
+      U_{B} &= \frac{1}{2 \mu_{0}} \int {\lvert \vec{B} \lvert}^{2} d^{3}r\\
     \end{align*}
   }
 \end{flashcard}
@@ -246,6 +256,131 @@
       C_{\textrm{parallel plate}} &= \frac{\epsilon_{0} A}{d}\\
       U &= \frac{1}{2} Q^{2} C^{-1} = \frac{1}{2} C \phi^{2}\\
     \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{magnetostatics}
+  {
+    \begin{align*}
+      \int_{S} \vec{B} \cdot d\vec{s} &= 0\\
+      \int_{C} \vec{B} \cdot d\vec{l} &= \mu_{0} I_{\textrm{enc}}\\
+      \vec{F_{B}} &= q\vec{v} \times \vec{B}\\
+      \vec{B}(\vec{r}) &= \frac{\mu_{0} I}{4 \pi} \int \frac{d\vec{l} \times \vec{r^{'}}}{{\lvert \vec{r^{'}}\lvert}^{3}}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{magnetostatic fields}
+  {
+    \begin{align*}
+      \vec{B} &= \mu_{0} \frac{N}{L} I \hat{z} \quad \textrm{(solenoid)}\\
+      \vec{B} &= \frac{\mu_{0} N I}{2 \pi r} \hat{\phi}\\
+    \end{align*}
+    There is no field outside a toroid or solenoid.
+  }
+\end{flashcard}
+
+\begin{flashcard}{cyclotron}
+  {
+    \begin{align*}
+      \vec{F} &= q \vec{v} \times \vec{B} = qvB \hat{x}\\
+      R &= \frac{mv}{qB}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{inductance}
+  {
+    \begin{align*}
+      \mathcal{E} &= \int_{C} \vec{E} \cdot d\vec{l} = \frac{- \partial \Phi_{B}}{\partial t}\\
+      \Phi_{21} &= M_{12} I_{1}\\
+      \Phi_{B} &= L I\\
+    \end{align*}
+    Induced curents oppose changes in magnetic flux
+  }
+\end{flashcard}
+
+\begin{flashcard}{inductance configurations}
+  {
+    \begin{align*}
+      L &= \frac{\mu_{0 N^{2} A}}{l} \quad \textrm{solenoid}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{multipoles}
+  {
+    \begin{align*}
+      \vec{p} &= \int \vec{r} \rho(\vec{r}) d^{3}r\\
+      V(\vec{r}) &= \frac{1}{4 \pi \epsilon_{0}} \frac{\vec{p} \cdot \vec{r}}{{\lvert \vec{r} \lvert}^{3}}\\
+      \tau &= \vec{p} \times \vec{E}\\
+      U &= - \vec{p} \cdot \vec{E}\\
+      \vec{m} &= I \vec{A}\\
+      \tau &= \vec{m} \times \vec{B}\\
+      U &= - \vec{m} \times \vec{B}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{em in media}
+  {
+    \begin{align*}
+      \sigma_{b} &= \vec{P} \cdot \hat{n}\\
+      \rho_{b} &= - \vec{\nabla} \cdot \vec{P}\\
+      \epsilon &= \kappa \epsilon_{0}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{em waves}
+  {
+    \begin{align*}
+      \vec{E}(\vec{r}) &= E_{0} e^{i(\vec{k} \cdot \vec{r} - \omega t)} \hat{n}\\
+      \vec{B}(\vec{r}) &= B_{0} e^{i(\vec{k} \cdot \vec{r} - \omega t)} (\hat{k} \times \hat{n})\\
+      \vec{S} &= \frac{1}{\mu_{0}} (\vec{E} \times \vec{B}) = \frac{1}{2 \mu_{0}} \textrm{Re}[\vec{E} \times \vec{B}^{*}]\\
+      I &= \langle S \rangle = \frac{c \epsilon_{0}}{2} E_{0}^{2}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{radiation}
+  {
+    \begin{align*}
+      P &= \frac{\mu_{0} q^{2} a^{2}}{6 \pi c} \quad \textrm{accelerating point charge}\\
+      \langle S \rangle &= \frac{\mu_{0} p_{0}^{2} \omega^{4}}{32 \pi^{2} c} \frac{\sin^{2}(\theta)}{r^{2}}\\
+      \langle P_{E} \rangle &= \frac{\mu_{0} p_{0}^{2} \omega^{4}}{12 \pi c}\\
+      \langle P_{B} \rangle &= \frac{\mu_{0} m_{0}^{2} \omega^{4}}{12 \pi c^{3}}
+    \end{align*}
+    The bottom three equations are for a radiating dipole.
+  }
+\end{flashcard}
+
+\begin{flashcard}{circuits}
+  {
+    \begin{align*}
+      V_{R} &= IR\\
+      V_{C} &= \frac{Q}{C}\\
+      V_{L} &= \frac{L}{\ddot{Q}}\\
+      R_{\textrm{series}} &= R_{i}\\
+      \frac{1}{C_{\textrm{series}}} &= \frac{1}{C_{i}}\\
+      L_{\textrm{series}} &= L_{i}\\
+      \frac{1}{R_{\textrm{parallel}}} &= \frac{1}{R_{i}}\\
+      C_{\textrm{parallel}} &= C_{i}\\
+      \frac{1}{L_{\textrm{parallel}}} &= \frac{1}{L_{i}}\\
+      R &= \frac{\rho l}{A}\\
+      P &= IV\\
+      U_{C} &= \frac{1}{2} C V^{2}\\
+      U_{L} &= \frac{1}{2} L I^{2}\\
+      I &= \frac{V}{R}(1 - e^{-\frac{t}{L/R}}) \quad \textrm{RL circuit}\\
+      V &= V_{0}e^{-\frac{t}{RC}} \quad \textrm{RC circuit}\\
+      \omega_{RLC} &= (L C)^{-\frac{1}{2}}
+    \end{align*}
+    \begin{itemize}
+    \item circuit elements in series see same current
+    \item circuit elements in parallel see same voltage
+    \item current in/out of a node is conserved
+    \item voltage is conserved over elements around a closed loop
+    \end{itemize}
   }
 \end{flashcard}
 
