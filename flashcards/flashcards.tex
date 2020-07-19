@@ -384,6 +384,8 @@
   }
 \end{flashcard}
 
+
+%% OPTICS WAVES
 \begin{flashcard}{wave equation}
   {
     \begin{align*}
@@ -450,6 +452,165 @@
     \begin{align*}
       I &\propto I_{0} \lambda^{-4}a^{6}\\
       f &= (\frac{v + v_{r}}{v - v_{s}}) f_{0}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+
+%% STAT MECH
+\begin{flashcard}{basic stat mech}
+  {
+    \begin{align*}
+      p_{i} &= \frac{e^{- \beta E_{i}}}{Z}\\
+      Z &= \sum_{j} e^{-\beta E_{j}}\\
+      \beta &= (k_{B} T)^{-1}\\
+      \langle O \rangle &= \sum_{i} p_{i} O_{i}\\
+      \langle E \rangle &= - \partial_{\beta} \textrm{ln} Z\\
+      Z_{N} &= \frac{1}{N! h^{3N}} \int e^{-\beta H(\vec{p}_{1},...\vec{p}_{n};\vec{x}_{1},...\vec{x}_{n})} d^{3}p_{1}...d^{3}p_{n} d^{3}x_{1}...d^{3}x_{n}\\
+      k_{B} &= 1.380 649 e-23 \textrm{J} \textrm{K}^{-1}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{entropy}
+  {
+    \begin{align*}
+      S &= k_{B} \textrm{ln} \Omega\\
+      S &= - k_{B} \sum_{i} p_{i} \textrm{ln} p_{i} = \partial_{T}(k_{B} T \textrm{ln} Z)\\
+      S &= N k_{B} \textrm{ln} \frac{V T^{3/2}}{N} + \textrm{const.} \ \textrm{(monoatomic ideal gas)}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{equipartition theorem}
+  Each quadratic term (d.o.f.) in the Hamiltonian for a particle contributes $k_{B} T / 2$
+  to the internal energy of a particle
+\end{flashcard}
+
+\begin{flashcard}{misc combinatorics}
+  {
+    \begin{align*}
+      (N, M) &= \frac{N!}{(N - M)! M!}\\
+      \textrm{ln} n! &= n \textrm{ln} n - n \ \textrm{$n$ large}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{thermodynamic laws}
+  \begin{itemize}
+  \item Energy is neither created nor destoryed\\
+    $\Delta U = Q - W$
+  \item There does not exista  process in which the sole effect is to transfer heat from a
+    body at lower temperature to a body at higher temperature\\
+    $\Delta S \ge \int \frac{\delta Q}{T}$
+  \item Entropy  is zero at absolute zero temperature. There is only one microstate at absolute
+    zero temperature
+  \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}{ideal gas law}
+  {
+    \begin{align*}
+      P V &= N k_{B} T
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{reversible process}
+  \begin{itemize}
+  \item system is in equilibrium at every instant
+  \item $\delta W = P dV$
+  \item $\delta Q = T dS$
+  \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}{quasistatic}
+  \begin{itemize}
+  \item in thermal equilibrium at every instant, but not necessarily reversible
+  \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}{adiabatic}
+  \begin{itemize}
+  \item $\delta Q = 0$
+  \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}{isentropic / reversible adiabatic}
+  \begin{itemize}
+  \item reversible and adiabatic
+  \item $\iff \Delta S = 0$
+  \item $PV^{\gamma} = \textrm{const.} \ ; \gamma = \frac{C_{P}}{C_{V}}$
+  \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}{IsoX}
+  \begin{itemize}
+  \item X held constant
+  \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}{free expansion}
+  \begin{itemize}
+  \item $\Delta T = 0$
+  \item irreversible
+  \item $P V = P^{'} V^{'}$
+  \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}{thermodynamic identities}
+  {
+    \begin{align*}
+      dU &= T dS - P dV\\
+      T &= \frac{\partial U}{\partial S} \rvert_{V}\\
+      P & = - \frac{\partial U}{\partial V} \rvert_{S}\\
+      \frac{\partial P}{\partial S} \rvert_{V} &= - \frac{\partial T}{\partial V} \rvert_{S}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{heat capacity}
+  {
+    \begin{align*}
+      C_{V} &= \frac{\partial Q}{\partial T} \rvert_{V} = \frac{\partial U}{\partial T}\\
+      C_{P} &= \frac{\partial Q}{\partial T} \rvert_{P}\\
+      C_{P} - C_{V} &= N k_{B} \ \textrm{(ideal gas)}\\
+      Q &= m c \Delta T\\
+      c_{\textrm{water}} &= 4.18 \ \textrm{J} \textrm{K}^{-1} \textrm{g}^{-1}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{model systems}
+  {
+    \begin{align*}
+      e &= 1 - \lvert \frac{Q_{C}}{Q_{H}} \rvert\\
+      e &= 1 - \frac{T_{C}}{T_{H}} \ \textrm{theoretical max, carnot}
+    \end{align*}
+  }
+  \begin{itemize}
+    \item use thermodynamic identities to calculate areas
+    \item clockwise paths in $P$ - $V$ and $T$ - $S$ planes do positive work
+  \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}{monoatomic ideal gas}
+  {
+    \begin{align*}
+      Z_{N} &= \frac{V^{N}}{N! h^{3N}}(2 \pi m k_{B} T)^{3^{N}/2}\\
+      U &= \frac{3}{2} N k_{B} T\\
+      v_{\textrm{rms}} &= (\frac{3 k_{B} T}{m})^{1/2}\\
+      K &= \gamma P
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{quantum stat mech}
+  {
+    \begin{align*}
+      F_{\textrm{FD}}(E_{i}) &= \frac{1}{e^{(E_{i} - \mu) / k_{B} T} + 1}\\
+      F_{\textrm{BE}}(E_{i}) &= \frac{1}{e^{(E_{i} - \mu) / k_{B} T} - 1}\\
+      \langle N \rangle &= \sum_{i} g(E_{i}) F(E_{i})\\
     \end{align*}
   }
 \end{flashcard}
