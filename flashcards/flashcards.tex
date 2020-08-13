@@ -17,6 +17,7 @@
 \begin{flashcard}{uniform circular motion}
   {\begin{align*}
       a &= \frac{v^{2}}{r}\\
+      v &= r \omega
   \end{align*}}
 \end{flashcard}
 
@@ -26,7 +27,7 @@
       E_{\textrm{trans}} &= \frac{1}{2} m v^{2}\\
       E_{\textrm{rot}} &= \frac{1}{2} I \omega^{2}\\
       E_{\textrm{gpe}} &= m g h\\
-      E_{\textrm{sho}} &= \frac{1}{2} k x^{2}\\
+      E_{\textrm{sho}} &= \frac{1}{2} k x^{2}
     \end{align*}
   }
 \end{flashcard}
@@ -36,7 +37,7 @@
     \begin{align*}
        dU &= -\vec{F} d\vec{l}\\
       \vec{F} &= - \vec{\nabla} U\\
-      dW &= \vec{F} \cdot d\vec{l}\\
+      dW &= \vec{F} \cdot d\vec{l}
     \end{align*}
   }
 \end{flashcard}
@@ -44,7 +45,7 @@
 \begin{flashcard}{gravitational force}
   {
     \begin{align*}
-      \vec{F} &= - G m_{1} m_{2} r^{-2} \hat{r_{12}}\\
+      \vec{F} &= - G m_{1} m_{2} r^{-2} \hat{r_{12}}
     \end{align*}
   }
 \end{flashcard}
@@ -52,7 +53,7 @@
 \begin{flashcard}{angular momentum}
   {
     \begin{align*}
-      \vec{L} &= \vec{r} \times \vec{p} = I \vec{\omega}\\
+      \vec{L} &= \vec{r} \times \vec{p} = I \vec{\omega}
     \end{align*}
   }
 \end{flashcard}
@@ -68,7 +69,7 @@
 \begin{flashcard}{constant angular velocity}
   {
     \begin{align*}
-      \vec{F} = - m \Omega^{2} r \hat{r}_{\textrm{centrifuge}} - 2 m \vec{\Omega} \times \vec{v}
+      \vec{F} = - m \Omega^{2} r \hat{r}_{\textrm{centrifuge}} - 2 m \vec{\Omega} \times \vec{v}\\
     \end{align*}
   }
 \end{flashcard}
@@ -123,6 +124,8 @@
       E &> 0 \implies \textrm{hyperbolic}\\
       E &= 0 \implies \textrm{parabolic}\\
       E &< 0 \implies \textrm{elliptical}\\
+      V^{'}(r) &= 0 \; \textrm{corresponds to circular orbit}\\
+      V^{''}(r)& \; \textrm{determines stability}\\
     \end{align*}
   }
 \end{flashcard}
@@ -181,6 +184,15 @@
     \end{align*}
   }
 \end{flashcard}
+
+\begin{flashcard}{mechanics misc.}
+  {
+    \begin{itemize}
+      \item an object falls over when its center of mass is not above its contact with the ground
+    \end{itemize}
+  }
+\end{flashcard}
+
 
 %% EM
 \begin{flashcard}{Maxwell's equations}
@@ -444,6 +456,13 @@
       \frac{1}{f} &= (n - 1) (\frac{1}{R_{1}} - \frac{1}{R_{2}})\\
       m &= \frac{- s^{'}}{s}\\
     \end{align*}
+    
+    \begin{itemize}
+    \item $s$, $s^{'}$ positive distances $\implies$ same side as light ray
+    \item negative distances $\implies$ opposite side as light ray
+    \item $f$ positive for converging lense, negative for diverging
+      \item $f$ positive for concave mirror, negative for convex mirror
+    \end{itemize}
   }
 \end{flashcard}
 
@@ -452,6 +471,26 @@
     \begin{align*}
       I &\propto I_{0} \lambda^{-4}a^{6}\\
       f &= (\frac{v + v_{r}}{v - v_{s}}) f_{0}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{fourier transform and series}
+  {
+    \begin{align*}
+      a_{n} &= \frac{2}{T} \int_{0}^{T} f(t) \cos{\frac{2 \pi n x}{T}}\\
+      b_{n} &= \frac{2}{T} \int_{0}^{T} f(t) \sin{\frac{2 \pi n x}{T}}\\
+      f(x) &= \frac{a_{0}}{2} + \sum_{n = 1}^{\infty} a_{n} \cos{\frac{2 \pi n x}{T}} + \sum_{n = 1}^{\infty} b_{n} \sin{\frac{2 \pi n x}{T}}\\
+      c_{n} &= \frac{1}{T} \int_{0}^{T} f(t) \exp{\frac{-i 2 \pi n x}{T}}\\
+      f(x) &= \sum_{n = -\infty}^{\infty} c_{n} \exp{\frac{i 2 \pi n x}{T}}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{pipes}
+  {
+    \begin{align*}
+      L &= \lambda(\frac{1}{4} + \frac{n}{2}) \; \textrm{half-open pipe}\\
     \end{align*}
   }
 \end{flashcard}
@@ -615,5 +654,393 @@
   }
 \end{flashcard}
 
+
+%% QUANTUM
+\begin{flashcard}{schroedinger equation}
+  {
+    \begin{align*}
+      \Psi(x, t) &= e^{-iE_{n}t/\hbar} \psi_{n}(x) \; \textrm{TDSE}\\
+    \end{align*}
+    
+    \begin{itemize}
+    \item $\psi_{n}$ are orthogonal
+    \item $\psi$ continuous, $\psi^{'}$ continuous except when $V(x) = \infty$
+    \item $\psi$ can be taken to be real, momentum expectation value vanishes for singleton state
+    \item ground state has no nodes, $n^{\textrm{th}}$ excited state has $n$ nodes
+    \item for an even potential $\psi_{n}$ is even for $n$ even, and odd for $n$ odd
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{uncertainty principle}
+  {
+    \begin{align*}
+      \sigma_{A}^{2} \sigma_{B}^{2} &\ge (\frac{1}{2i} \langle [A, B] \rangle)^{2}\\
+      \sigma_{A}^{2} &= \langle A^{2} \rangle - {\langle A \rangle}^{2}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{quantum configurations}
+  {
+    \begin{align*}
+      E &= \frac{j(j + 1)\hbar^{2}}{2 I} \; \textrm{rigid rotator}\\
+      E_{n} &= \frac{\hbar^{2} \pi^{2} n^{2}}{2 m a^{2}} \; \ket{\psi_{n}} = (\frac{2}{a})^{1/2} \sin(\frac{n \pi x}{a}) \; \textrm{infinite square well}\\
+      \ket{\psi} &= e^{\pm i k x} \; E = \frac{\hbar^{2} k^{2}}{2 m} \; p = \hbar k \; \textrm{free particle}\\
+      &\textrm{free particle is sum of these wave functions, particle w/ definite momentum is not normalizable, i.e. doesn't exist}\\
+      \ket{\psi} &= (\frac{m \alpha}{\hbar^{2}})^{1/2} e^{-m \alpha \lvert x \rvert / \hbar^{2}} \; E = \frac{-m \alpha^{2}}{2 \hbar^{2}} \; \textrm{delta well}\\
+      &\textrm{The finite square well is symmetric about zero so the states have definite parity.The ground state is even.}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{QHO}
+  {
+    \begin{align*}
+      H &= \hbar \omega (a^{\dagger}a + \frac{1}{2}) \; [a, a^{\dagger}] = 1 \; \textrm{QHO}\\
+      &\textrm{ground state of QHO is gaussian}\\
+      \langle T \rangle &= \langle V \rangle = \frac{E_{n}}{2} \; \textrm{QHO virial theorem}\\
+      a^{\dagger} \ket{n} &= (n + 1)^{1/2} \ket{n + 1}\\
+      a \ket{n} &= (n)^{1/2} \ket{n - 1}\\
+      E_{n} &= \hbar \omega (N + \frac{3}{2}) \; N = n_{1} + n_{2} + n_{3} \; \textrm{QHO3D}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{QM in 3D}
+  {
+    \begin{align*}
+      \frac{-h^{2}}{2m} \partial_{r}^{2} u + (V + \frac{h^{2}}{2m} \frac{l(l+1)}{r^{2}}) u &= E u\\
+      u(r) &= r R(r)\\
+      \int_{0}^{\infty} {\lvert R(r) \rvert}^{2} r^{2} dr &= 1
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{angular momentum}
+  {
+    \begin{align*}
+      [L_{i}, L_{j}] &= \epsilon^{ijk} i \hbar L_{k}\\
+      [L^{2}, L_{i}] &= 0\\
+      L_{z} Y_{l}^{m} &= m \hbar Y_{l}^{m}\\
+      L^{2} Y_{l}^{m} &= \hbar^{2} l(l + 1) Y_{l}^{m}\\
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{spin operators}
+  {
+    \begin{align*}
+      S_{\chi} &= S_{\chi}^{(1)} + \dots + S_{\chi}^{(n)}\\
+      S_{\chi}^{(m)} &= I \odot ... \odot S_{\chi} \odot ... \odot I\\
+      x_{1} &= 2^{-1/2} \begin{pmatrix} 1\\ 1 \end{pmatrix} \; x_{2} = 2^{-1/2} \begin{pmatrix} 1 -1 \end{pmatrix}\\
+      y_{1} &= 2^{-1/2} \begin{pmatrix} 1\\ i \end{pmatrix} \; y_{2} = 2^{-1/2} \begin{pmatrix} 1 -i \end{pmatrix}\\
+      \ket{\Psi} &= \ket{\psi} \ket{\chi}\\
+      s_{\textrm{tot}} &= s + s^{'}, s + s^{'} - 1, \dots, \lvert s - s^{'} \rvert\\
+      m_{\textrm{tot}} &= m_{s} + m_{s^{'}}
+    \end{align*}
+
+    \begin{itemize}
+    \item add multiple spins by adding pairs
+    \item boson (fermions) symmetric (anti-symmetric) under exchange of any two particles
+    \item when adding spin-$1/2$ particles, spin states $s = n / 2$ are always symmetric
+    \item 2e helium ground state is spatially symmetric
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{hydrogen atom}
+  {
+    \begin{align*}
+      a &= \frac{4 \pi \epsilon_{0} \hbar^{2}}{\mu e^{2}}\\
+      \psi_{1} &\propto e^{-r/a}\\
+      E_{n} &= \frac{- \hbar^{2}}{2 \mu a^{2}} \frac{1}{n^{2}} = \frac{-13.6 \textrm{ev}}{n^{2}}\\
+      \alpha &= \frac{e^{2}}{4 \pi \epsilon_{0} \hbar c} \sim 1 / 137\\
+      \psi \lvert_{r = 0} &= 0 \; \textrm{for} \; l \neq 0
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{approximation methods}
+  {
+    \begin{align*}
+      E_{n} &= E_{n}^{0} + \braket{\psi_{n}^{0} \lvert H_{1} \rvert}{\psi_{n}^{0}}\\
+      E_{n} &= E_{n}^{0} + \sum_{m \neq n} \frac{\braket{\psi_{m}^{0} \lvert H_{1} \rvert \psi_{n}^{0}}}{E_{n}^{0} - E_{m}^{0}}
+    \end{align*}
+
+    \begin{itemize}
+    \item diagonalize expectation values of degenerate states with perturbation,
+      eigenvalues are first order corrections
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{Bohr model}
+  {
+    \begin{itemize}
+    \item Electron moves in circular oribt. angular momentum is quantized $L = \hbar n$
+    \item no electron radiation in a given shell (experimentally shown)
+    \item mathces hydrogen transitions
+    \item hydrogen energy $\propto \alpha^{2} m_{e} c^{2}$
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{fine structure}
+  {
+    \begin{itemize}
+    \item spin-orbit coupling and relativistic momentum
+    \item energy shift $\propto \alpha^{4} m_{e} c^{2}$
+    \item energy levels get j dependence, $m_{j}$ conserved, $l$ degeneracy broken
+    \item $J_{2} = L^{2} + S^{2} + 2 L \dot S$
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{Lamb shift}
+  {
+    \begin{itemize}
+    \item QED
+    \item energy shift $\propto \alpha^{5} m_{e} c^{2}$
+    \item splits s and 2p levels with $j = \frac{1}{2}$ degeneracy
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{hyperfine structure}
+  {
+    \begin{itemize}
+    \item nucleus-electron spin-spin coupling
+    \item energy shift $\propto \frac{m_{e}}{m_{p}} \alpha^{4} m_{e} c^{2}$
+      \item ground state of hydrogen split depending on singlet or triplet configuration
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{shell model}
+  {
+    \begin{itemize}
+    \item s, p, d, f $\iff l = 0, 1, 2, 3, \dots$
+    \item $2^{2}$ orbitals in each shell. $2(2l + 1)$ states in each orbital
+    \item 1s, 2s, 2p, 3s, 3p, 3d
+    \item shells fill in order. noble gases have filled shells
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{stark effect}
+  {
+    \begin{itemize}
+    \item $H_{1} = q \vec{E} \vec{x}$
+    \item no change to ground state energy of hydrogenic atom to first order in $\lvert \vec{E} \rvert$
+    \item n = 2, m = 0 states are split
+    \item $\Delta E \propto q \lvert \vec{E} \rvert a_{0}$
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{Zeeman effect}
+  {
+    \begin{itemize}
+    \item $H_{1} = \frac{q}{2m} (\vec{L} + 2\vec{S}) \cdot \vec{B}$
+    \item $\lvert \vec{B} \rvert$ small, Zeeman perturbs fine. $j, l, m_{j}$ quantum numbers. $j$ splits based on $m_{j}$, spin wants to be anti-aligned with $B$-field
+      \item $\lvert \vec{B} \rvert$ large, fine perturbs Zeeman. $l, m_{l}, m_{s}$. l splits on $m_{l}, m_{s}$
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{electric dipole radiation selection rules}
+  {
+    \begin{itemize}
+    \item electric dipole approximation $\lambda \gg a \; \implies$ spatial variation of the field is negligible
+    \item $\Delta m = \pm 1, 0$
+    \item $\Delta l = \pm 1$
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{blackbody radiation}
+  {
+    \begin{align*}
+      I(\omega) \propto \frac{h \omega^{3}}{c^{2}} \frac{1}{e^{\hbar \omega / k_{B} T} - 1}\\
+      \frac{dP}{dA} \propto T^{4}\\
+      \lambda_{\textrm{peak}} &= 3 \cdot 10^{-3} K m T^{-1}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{quantum misc.}
+  {
+    \begin{align*}
+      \lambda_{\textrm{compton}} &= \frac{h}{mc}
+    \end{align*}
+  }
+\end{flashcard}
+
+
+%% RELATIVITY
+\begin{flashcard}{realtivity basics}
+  {
+    \begin{align*}
+      \beta &= \frac{v}{c}\\
+      \gamma &= (1 - \beta^{2})^{-1/2}\\
+      w &= \frac{v + u}{1 + vu/c^{2}}\\
+      x^{\mu} &= \begin{pmatrix} ct\\ \vec{x} \end{pmatrix} \; p^{\mu} = \begin{pmatrix} \frac{E}{c}\\ \vec{p} \end{pmatrix}\\
+      \vec{p} &= \gamma m \vec{v}\\
+      \Lambda &= \begin{pmatrix} \gamma & -\gamma \beta\\ -\gamma \beta & \gamma \end{pmatrix}\\
+      \lambda^{'} &= \lambda (\frac{1 + \Delta \beta}{1 - \Delta \beta})^{1/2}
+    \end{align*}
+  }
+\end{flashcard}
+
+
+\begin{flashcard}{relativity misc.}
+  {
+    \begin{itemize}
+    \item $p^{\mu}p_{\mu} = m^{2}c^{2}$
+    \item timelike $\Delta x^{\mu} \Delta x_{\mu} > 0$, there exists a rest frame where events occur at the same place
+    \item spacelike $\Delta x^{\mu} \Delta x_{\mu} < 0$, there exists a rest frame where events occur at the same time
+    \item lightlike $\Delta x^{\mu} \Delta x_{\mu} = 0$ rest frame is spaceship traveling between events
+    \end{itemize}
+  }
+\end{flashcard}
+
+
+%% LAB
+\begin{flashcard}{graph reading}
+  {
+    \begin{itemize}
+    \item straight line on log-log is $y = ax^{b}$ where $b$ is the slope
+    \item straight line on log-linear is $y = C a^{bx}$ where $b \log_{10}(a)$ is the slope
+    \item straight line on linear-log is $y = C\log_{a}(bx)$ where $C / \log_{10}(a)$ is the slope
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{statistics}
+  {
+    \begin{align*}
+      \sigma_{s}^{2} &= \frac{1}{n - 1} \sum_{i = 1}^{n} (x_{i} - \bar{x})^{2} \; \textrm{sample variance, use $1/n$ for pop}\\
+      \delta(a A) &= a \delta A\\
+      \delta(A + B) &= ((\delta A)^{2} + (\delta B)^{2})^{1/2}\\
+      \delta(AB^{-1}) & = \delta(AB) = AB ((\frac{\delta A}{A})^{2} + (\frac{\delta B}{B})^{2})^(1/2)\\
+      X &= \frac{\sum_{i} x_{i} \sigma_{x_{i}}^{-2}}{\sum_{i} \sigma_{x_{i}}^{-2}}\\
+      \sigma^{2} &= \frac{1}{\sum_{i} \sigma_{x_{i}}^{-2}}\\
+      P(n) &= \frac{\lambda^{n}e^{- \lambda}}{n!}\\
+      \sigma &= N^{1/2} \; \textrm{Poisson distribution with $N$ large}\\
+      P(t) &= \lambda e^{- \lambda t} \; \textrm{time between events}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{electronics}
+  {
+    \begin{align*}
+      V &= V_{0}e^{i \omega t}\\
+      V &= I Z\\
+      Z_{\textrm{cap}} &= \frac{1}{i \omega C}\\
+      Z_{\textrm{ind}} &= i \omega L\\
+      Z_{\textrm{res}} &= R\\
+      Z_{\textrm{series}} &= \sum_{i} Z_{i}\\
+      Z_{\textrm{parallel}}^{-1} &= \sum_{i} Z_{i}^{-1}
+    \end{align*}
+
+    \begin{itemize}
+    \item resonant frequency is where $Im(Z) = 0$
+    \item diode - current only flows in one direction once bias voltage is met -|>|-
+    \item op-amp - output voltage is proportional to difference between inputs =|>-
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{radiation detection}
+  {
+    \begin{itemize}
+    \item nuclei are stopped faster than electrons alpha (He$^{4}$) $\propto 10^{-5}$m, $e \propto 10^{-3}$m
+    \item nuceli interact w/ electrons. electrons interact w/ electrons or nuclei
+    \item nuclei tend to have straight paths, electrons bounce around
+    \item nuclei lose energy due to collisions, electrons lose energy by collision or bremsstrahlung radiation (photon emission due to deceleration)
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{photon interactions}
+  {
+    \begin{itemize}
+    \item photon absorbption
+      \subitem dominant at a few keV
+      \subitem photon absorbed by atom and electron released
+      \subitem $E_{max} = E \gamma - \phi$ work function used for photon on material
+    \item compton scattering
+      \subitem photon scatters elastically off atomic electron, scattered electron is ejected from atom
+      \subitem dominant for 10s of keV to a few Mev
+      \subitem $\Delta \lambda = \frac{h}{mc}(1 - \cos(\theta))$
+    \item pair production
+      \subitem If $E_{\gamma} > 2m_{e}c^{2}$, dominant process for tens of MeV
+      \subitem photon produces electron-positron pair
+    \item decay channels compound like $\tau^{-1} = \tau^{-1}_{1} + \tau^{-1}_{2}$
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{lasers}
+  {
+    \begin{itemize}
+    \item 3-level $\Delta E_{01}$ small, 4-level $\Delta E_{01}$ large
+    \item solid-state laser
+      \subitem crystal, glass, transitions between atomic energy levels Nd:YAG, YAG E-field splits Nd
+    \item collisional gas laser
+      \subitem gas excited by KE from collisions, light filtered with conducting cavity
+    \item molecular gas laser
+      \subitem vibrational energy levels
+    \item dye laser
+      \subitem organic dye dissolved in water, electron transport chain
+    \item semiconductor (dipole) laser
+      \subitem excites semiconductor conduction band energy due to e-hole annihilation
+    \item free electron laser
+      \subitem accelerate with E-field
+    \item michelson-morley interferometer $d \sin_{\theta} = m \lambda$
+    \end{itemize}
+  }
+\end{flashcard}
+
+\begin{flashcard}{lab misc.}
+  {
+    \begin{itemize}
+    \item a confidence interval is a range of values for a parameter (typically the mean),
+      associated to a confidence level. The confidence level gives the reliability of the estimation
+      procedure, not to be confused with the long run probability of measuring the parameter
+      within the interval. The upper limit on the parameter is the value
+      at which the statement doesn't hold that the long run probability of measuring the parameter
+      within the interval.
+    \end{itemize}
+  }
+\end{flashcard}
+
+
+%% MISC
+\begin{flashcard}{fermi gas}
+  {
+    \begin{align*}
+      E &= \frac{\hbar^{2}}{2m}(3 \frac{Nd}{V} \pi^{2})^{2/3}\\
+      P &= \frac{(3\pi^{2})^{2/3}}{5m}(\frac{Nd}{V})^{5/3}\\
+      T &= \frac{E}{k_{B}}\\
+      p &= (2mE)^{1/2}
+    \end{align*}
+  }
+\end{flashcard}
+
+\begin{flashcard}{misc misc.}
+  {
+    \begin{align*}
+      z_{\textrm{redshift}} &= \frac{\lambda_{\textrm{observed} - \lambda_{\textrm{emitted}}}}{\lambda{\textrm{emitted}}}
+    \end{align*}
+    
+    \begin{itemize}
+    \item p-type junction: electron holes, positive net charge
+    \item n-type junction: no electron holes, negative net charge
+    \end{itemize}
+  }
+\end{flashcard}
 
 \end{document}
