@@ -1,4 +1,4 @@
-\documentclass[avery5388, frame, grid]{flashcards}
+\documentclass[avery5388, frame]{flashcards}
 
 \input{preamble}
 
@@ -21,7 +21,7 @@
   \end{align*}}
 \end{flashcard}
 
-\begin{flashcard}{kintec and potential energy}
+\begin{flashcard}{kinetic and potential energy}
   {
     \begin{align*}
       E_{\textrm{trans}} &= \frac{1}{2} m v^{2}\\
@@ -35,7 +35,7 @@
 \begin{flashcard}{potential energy, force, work}
   {
     \begin{align*}
-       dU &= -\vec{F} d\vec{l}\\
+       dU &= -\vec{F} \cdot d\vec{l}\\
       \vec{F} &= - \vec{\nabla} U\\
       dW &= \vec{F} \cdot d\vec{l}
     \end{align*}
@@ -50,18 +50,11 @@
   }
 \end{flashcard}
 
-\begin{flashcard}{angular momentum}
+\begin{flashcard}{angular momentum, torque}
   {
     \begin{align*}
       \vec{L} &= \vec{r} \times \vec{p} = I \vec{\omega}
-    \end{align*}
-  }
-\end{flashcard}
-
-\begin{flashcard}{torque}
-  {
-    \begin{align*}
-      \tau = \vec{r} \times \vec{F} = \frac{d \vec{L}}{dt}
+      \vec{\tau} = \vec{r} \times \vec{F} = \frac{d \vec{L}}{dt}
     \end{align*}
   }
 \end{flashcard}
@@ -74,12 +67,15 @@
   }
 \end{flashcard}
 
-\begin{flashcard}{spherical elements}
+\begin{flashcard}{spherical and cylindrical elements}
   {
     \begin{align*}
       d\vec{l} &= dr \hat{r} + r d\theta \hat{\theta} + r \sin\theta d\phi \hat{\phi}\\
       d\vec{S} &= r^{2}\sin\theta d\theta d\phi \hat{r} + r \sin\theta dr d\phi \hat{\theta} + r dr d\theta \hat{\phi}\\
       dV &= r^{2}\sin\theta dr d\theta d\phi\\
+      d\vec{l} &= d\rho \hat{\rho} + \rho d\phi \hat{\phi} + dz \hat{z}\\
+      d\vec{S} &= \rho d\phi dz \hat{\rho} + d\rho dz \hat{\phi} + d\rho \rho d\phi \hat{z}\\
+      dV &= \rho d\rho d\phi dz
     \end{align*}
   }
 \end{flashcard}
@@ -125,6 +121,7 @@
       E &= 0 \implies \textrm{parabolic}\\
       E &< 0 \implies \textrm{elliptical}\\
       V^{'}(r) &= 0 \; \textrm{corresponds to circular orbit}\\
+      &\textrm{above equation can be used to solve for radius of any orbit}\\
       V^{''}(r)& \; \textrm{determines stability}\\
     \end{align*}
   }
@@ -166,7 +163,7 @@
   }
 \end{flashcard}
 
-\begin{flashcard}{oscillators}
+\begin{flashcard}{oscillator configurations}
   {
     \begin{itemize}
     \item pendulum $\omega = (\frac{g}{l})^{\frac{1}{2}}$
@@ -181,6 +178,7 @@
       \frac{v^2}{2} &+ g z + \frac{p}{\rho} = \textrm{const}\\
       p \; \textrm{pressure, } &\rho \; \textrm{fluid density, } z \; \textrm{height of a point along streamline}\\
       F & = \rho V g\\
+      &\textrm{$F$ buoyant force, $V$ displaced fluid}
     \end{align*}
   }
 \end{flashcard}
@@ -227,12 +225,12 @@
     \begin{align*}
       E^{\parallel}_{\textrm{out}} - E^{\parallel}_{\textrm{in}} &= 0\\
       E^{\bot}_{\textrm{out}} - E^{\bot}_{\textrm{in}} &= \frac{\sigma}{\epsilon_{0}}\\
-      \phi &\textrm{is continuous}\\
-      \partial \phi & \textrm{continuous when no surface charge is present}\\
+      \phi &\; \textrm{is continuous}\\
+      \partial \phi &\; \textrm{continuous when no surface charge is present}\\
     \end{align*}
     Magnetostatics
     \begin{align*}
-      B^{\parallel}_{\textrm{out}} - B^{\parallel}_{\textrm{in}} &= \mu_{0} \vec{k} \times \hat{n}
+      B^{\parallel}_{\textrm{out}} - B^{\parallel}_{\textrm{in}} &= \mu_{0} \vec{k} \times \hat{n}\\
       B^{\bot}_{\textrm{out}} - B^{\bot}_{\textrm{in}} &= 0
     \end{align*}
     $\vec{k}$ is the surface current density
@@ -245,7 +243,7 @@
       \phi &= \textrm{const. throughout conductor}\\
       & \implies \textrm{E-field inside is zero}\\
       & \implies Q_{\textrm{inside}} = 0\\
-      & \implies Q_{\textrm{net}} \textrm{confined to surface}\\
+      & \implies Q_{\textrm{net}} \; \textrm{confined to surface}\\
       & \implies \textrm{E-field outside is perpendicular to surface}\\
     \end{align*}
   }
@@ -277,16 +275,16 @@
       \int_{S} \vec{B} \cdot d\vec{s} &= 0\\
       \int_{C} \vec{B} \cdot d\vec{l} &= \mu_{0} I_{\textrm{enc}}\\
       \vec{F_{B}} &= q\vec{v} \times \vec{B}\\
-      \vec{B}(\vec{r}) &= \frac{\mu_{0} I}{4 \pi} \int \frac{d\vec{l} \times \vec{r^{'}}}{{\lvert \vec{r^{'}}\lvert}^{3}}\\
+      \vec{B}(\vec{r}) &= \frac{\mu_{0} I}{4 \pi} \int \frac{d\vec{l} \times \vec{r^{'}}}{{\lvert \vec{r^{'}}\lvert}^{3}} d^{3}r^{'}\\
     \end{align*}
   }
 \end{flashcard}
 
-\begin{flashcard}{magnetostatic fields}
+\begin{flashcard}{magnetostatic configurations}
   {
     \begin{align*}
       \vec{B} &= \mu_{0} \frac{N}{L} I \hat{z} \quad \textrm{(solenoid)}\\
-      \vec{B} &= \frac{\mu_{0} N I}{2 \pi r} \hat{\phi}\\
+      \vec{B} &= \frac{\mu_{0} N I}{2 \pi r} \hat{\phi} \quad \textrm{(toroid)}\\
     \end{align*}
     There is no field outside a toroid or solenoid.
   }
@@ -325,11 +323,11 @@
     \begin{align*}
       \vec{p} &= \int \vec{r} \rho(\vec{r}) d^{3}r\\
       V(\vec{r}) &= \frac{1}{4 \pi \epsilon_{0}} \frac{\vec{p} \cdot \vec{r}}{{\lvert \vec{r} \lvert}^{3}}\\
-      \tau &= \vec{p} \times \vec{E}\\
+      \vec{\tau} &= \vec{p} \times \vec{E}\\
       U &= - \vec{p} \cdot \vec{E}\\
       \vec{m} &= I \vec{A}\\
-      \tau &= \vec{m} \times \vec{B}\\
-      U &= - \vec{m} \times \vec{B}\\
+      \vec{\tau} &= \vec{m} \times \vec{B}\\
+      U &= - \vec{m} \cdot \vec{B}\\
     \end{align*}
   }
 \end{flashcard}
@@ -367,18 +365,23 @@
   }
 \end{flashcard}
 
-\begin{flashcard}{circuits}
+\begin{flashcard}{circuit elements}
   {
+    \vspace{-0.5cm}
+    \begin{multicols}{2}
     \begin{align*}
       V_{R} &= IR\\
       V_{C} &= \frac{Q}{C}\\
-      V_{L} &= \frac{L}{\ddot{Q}}\\
+      V_{L} &= L\dot{I}\\
       R_{\textrm{series}} &= R_{i}\\
       \frac{1}{C_{\textrm{series}}} &= \frac{1}{C_{i}}\\
       L_{\textrm{series}} &= L_{i}\\
       \frac{1}{R_{\textrm{parallel}}} &= \frac{1}{R_{i}}\\
       C_{\textrm{parallel}} &= C_{i}\\
       \frac{1}{L_{\textrm{parallel}}} &= \frac{1}{L_{i}}\\
+    \end{align*}
+
+    \begin{align*}
       R &= \frac{\rho l}{A}\\
       P &= IV\\
       U_{C} &= \frac{1}{2} C V^{2}\\
@@ -387,6 +390,12 @@
       V &= V_{0}e^{-\frac{t}{RC}} \quad \textrm{RC circuit}\\
       \omega_{RLC} &= (L C)^{-\frac{1}{2}}
     \end{align*}
+    \end{multicols}
+  }
+\end{flashcard}
+
+\begin{flashcard}{circuit rules}
+  {
     \begin{itemize}
     \item circuit elements in series see same current
     \item circuit elements in parallel see same voltage
@@ -400,16 +409,15 @@
 %% OPTICS WAVES
 \begin{flashcard}{wave equation}
   {
+    \vspace{-0.25cm}
     \begin{align*}
       \partial_{t}^{2} \psi &= v^{2} \partial_{x}^{2} \psi\\
       \psi(\vec{r}, t) &= A \cos(\vec{k} \cdot \vec{r} - \omega t + \phi)\\
-      &= \textrm{Re}[A e^{i(\vec{k} \cdot \vec{r} - \omega t)}]
+      &= \textrm{Re}[A e^{i(\vec{k} \cdot \vec{r} - \omega t)}]\\
       v_{\textrm{phase}} &= \frac{\omega}{k}\\
       v_{\textrm{group}} &= \frac{\partial w}{\partial k}\\
-      \frac{\omega}{k} &= \frac{c}{n} \ \lambda \rightarrow \frac{\lambda}{n} \textrm{light}\\
-      \lambda &= \frac{2 \pi}{k}\\
-      T &= \frac{2 \pi}{\omega}\\
-      \omega &= 2 \pi f\\
+      \frac{\omega}{k} &= \frac{c}{n} \implies \lambda \rightarrow \frac{\lambda}{n} \quad \textrm{light}\\
+      \lambda = \frac{2 \pi}{k} \quad T &= \frac{2 \pi}{\omega} \quad \omega = 2 \pi f
     \end{align*}
   }
 \end{flashcard}
@@ -438,39 +446,47 @@
       d \sin(\theta) &= m \lambda \ \textrm{max dub-slit}\\
       d \sin(\theta) &= (m + \frac{1}{2}) \lambda \ \textrm{min dub-slit}\\
       a \sin(\theta) &= m \lambda \ \textrm{min single-slit}\\
-      D \sin(\theta) &= 1.22 \lambda \ \textrm{first circular diffraction minimum}
+      D \sin(\theta) &= 1.22 \lambda \ \textrm{first circular diffraction minimum}\\
       d \sin(\theta) &= \frac{n \lambda}{2} \ \textrm{x-rays on crystal maxima}\\
       n_{2} > n_{1} &\implies \pi \ \textrm{phase shift}\\
-      n_{2} < n_{1} &\implies 0 \ \textrm{phase shift}\\
+      n_{2} < n_{1} &\implies 0 \ \textrm{phase shift}
     \end{align*}
   }
 \end{flashcard}
 
 \begin{flashcard}{geometric optics}
   {
+    \setlength{\columnsep}{-1cm}
+    \begin{multicols}{2}
     \begin{align*}
-      \theta_{i} &= \theta_{r}
+      \theta_{i} &= \theta_{r}\\
       n_{1} \sin(\theta_{1}) &= n_{2} \sin(\theta_{2})\\
       \frac{1}{s} + \frac{1}{s^{'}} &= \frac{1}{f}\\
       f &= \frac{R}{2} \ \textrm{spherical mirror}\\
       \frac{1}{f} &= (n - 1) (\frac{1}{R_{1}} - \frac{1}{R_{2}})\\
-      m &= \frac{- s^{'}}{s}\\
+      m &= \frac{- s^{'}}{s}
     \end{align*}
     
     \begin{itemize}
-    \item $s$, $s^{'}$ positive distances $\implies$ same side as light ray
-    \item negative distances $\implies$ opposite side as light ray
-    \item $f$ positive for converging lense, negative for diverging
-      \item $f$ positive for concave mirror, negative for convex mirror
+    \item $s$, $s^{'}$ positive distances\\
+      $\implies$ same side as light ray
+    \item negative distances\\
+      $\implies$ opposite side as light ray
+    \item $f$ positive for converging lense,\\
+      negative for diverging
+    \item $f$ positive for concave mirror,\\
+      negative for convex mirror
     \end{itemize}
+    \end{multicols}
   }
 \end{flashcard}
 
 \begin{flashcard}{misc optics}
   {
     \begin{align*}
-      I &\propto I_{0} \lambda^{-4}a^{6}\\
+      I &\propto I_{0} \lambda^{-4}a^{6} \quad \lambda \gg a\\
       f &= (\frac{v + v_{r}}{v - v_{s}}) f_{0}\\
+      L &= \lambda(\frac{1}{4} + \frac{n}{2}) \; \textrm{half-open pipe}\\
     \end{align*}
   }
 \end{flashcard}
@@ -487,14 +503,6 @@
   }
 \end{flashcard}
 
-\begin{flashcard}{pipes}
-  {
-    \begin{align*}
-      L &= \lambda(\frac{1}{4} + \frac{n}{2}) \; \textrm{half-open pipe}\\
-    \end{align*}
-  }
-\end{flashcard}
-
 
 %% STAT MECH
 \begin{flashcard}{basic stat mech}
@@ -506,7 +514,7 @@
       \langle O \rangle &= \sum_{i} p_{i} O_{i}\\
       \langle E \rangle &= - \partial_{\beta} \textrm{ln} Z\\
       Z_{N} &= \frac{1}{N! h^{3N}} \int e^{-\beta H(\vec{p}_{1},...\vec{p}_{n};\vec{x}_{1},...\vec{x}_{n})} d^{3}p_{1}...d^{3}p_{n} d^{3}x_{1}...d^{3}x_{n}\\
-      k_{B} &= 1.380 649 e-23 \textrm{J} \textrm{K}^{-1}
+      k_{B} &= 1.3e\textrm{-}23 \; \textrm{J} \textrm{K}^{-1}
     \end{align*}
   }
 \end{flashcard}
@@ -515,8 +523,8 @@
   {
     \begin{align*}
       S &= k_{B} \textrm{ln} \Omega\\
-      S &= - k_{B} \sum_{i} p_{i} \textrm{ln} p_{i} = \partial_{T}(k_{B} T \textrm{ln} Z)\\
-      S &= N k_{B} \textrm{ln} \frac{V T^{3/2}}{N} + \textrm{const.} \ \textrm{(monoatomic ideal gas)}
+      S &= - k_{B} \sum_{i} p_{i} \textrm{ln}(p_{i}) = \partial_{T}(k_{B} T \textrm{ln}(Z))\\
+      S &= N k_{B} \textrm{ln}(\frac{V T^{3/2}}{N}) + \textrm{const.} \ \textrm{(monoatomic ideal gas)}
     \end{align*}
   }
 \end{flashcard}
@@ -530,7 +538,7 @@
   {
     \begin{align*}
       (N, M) &= \frac{N!}{(N - M)! M!}\\
-      \textrm{ln} n! &= n \textrm{ln} n - n \ \textrm{$n$ large}
+      \textrm{ln}(n!) &= n \textrm{ln}(n) - n \quad \textrm{$n$ large}
     \end{align*}
   }
 \end{flashcard}
